@@ -37,6 +37,7 @@ void block_parallel(unsigned int n, [[maybe_unused]] unsigned int memory_length,
 }
 
 int main() {
-    omp_set_num_threads(8);
+    int numCores = omp_get_num_procs();
+    omp_set_num_threads(numCores);
     test_suite(block_parallel);
 }

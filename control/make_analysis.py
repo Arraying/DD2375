@@ -218,7 +218,7 @@ def calculate_flops():
         ax.bar(x_positions[i], y[:, i], yerr=y_err[:, i], width=bar_width, label=component, hatch=formats[i])
 
     ax.set_xlabel("Implementations")
-    ax.set_ylabel("GFLOP")
+    ax.set_ylabel("GFLOPS")
     ax.set_xticks(x_base + (num_components - 1) * bar_width / 2)
     ax.set_xticklabels(labels)
     ax.legend(title="Matrix Size", loc="upper left")

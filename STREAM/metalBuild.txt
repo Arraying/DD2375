@@ -1,0 +1,5 @@
+xcrun -sdk macosx metal -c stream.metal -o stream.air                                       
+xcrun -sdk macosx metallib stream.air -o stream.metallib
+
+clang++ -fobjc-arc -framework Metal -framework Foundation -o streamMetal.out streamMetal.mm
+

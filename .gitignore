@@ -10,3 +10,7 @@ build/
 data/
 out/
 results/
+
+*.out
+*.metallib
+*.air

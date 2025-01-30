@@ -17,6 +17,7 @@ This project requires Xcode, C++20 and `libomp`. The following software and vers
 | Make  | 3.81      | 3.81      | 3.81      | 3.81   |
 | Xcode | 14.0.1, 15.4    | 16.2      | 16.2      | 16.2  |
 | AppleClang | 14.0.0    | 16.0.0    | 16.0.0 | 16.0.0 |
+| Clang     |    19.1.7       |    19.1.7      |    19.1.6       |    19.1.7       |
 | Metal | 31001.643 | 32023.404 | 32023.404 | 32023.404 |
 | libomp | 19.1.4   | 19.1.7    | 19.1.6    | 19.1.7    |
 
@@ -82,3 +83,15 @@ Please generate the matrices data according to **Benchmarking** section above.
 
 For CPU-based builds, cwd into `build` and execute the binary.
 For GPU-based builds, cwd into `build/XXX.app/Contents/MacOS` (where `XXX` is the name of an executable) and execute the binary.
+
+
+## STREAM
+
+To test the bandwidth of unified memory architecture of M-Series chips, STREAM test is used. And a Metal GPU version was ported from a [CUDA/HIP version](https://github.com/KTH-ScaLab/multi-gpu-comm/blob/master/tools/stream/stream_cpugpu.cpp). 
+
+### Usage
+
+Change the clang path in [STREAM-CPU.sh](./STREAM/STREAM-CPU.sh). And execute the scripts.
+
+Follow the commands in [metalBuild.txt](./STREAM/metalBuild.txt). And execute the `streamMetal.out`
+
